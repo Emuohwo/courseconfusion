@@ -35,9 +35,48 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <div class="navbar-text">
+                    <a href="" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in">Login</span></a>
+                </div>
             </div>            
         </div>
     </nav>
+
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" data-dismiss="modal" class="close">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputEmail3" class="sr-only">Email Address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputPassword3" class="sr-only">Password</label>
+                                <input type="passorw" class="form-control form-control-sm mr-1" id="exampleInputPassord3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberme">
+                                    <label for="rememberme" class="form-check-label">Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" data-dismiss="modal" class="btn btn-secondary btn-sm ml-auto">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -52,7 +91,9 @@
                         <img src="img/logo.png" alt="logo" class="img-fluid">
                     </div>
                     <div class="col-12 col-sm-6 align-self-center">
-                        <a href="#reservetable" class="btn btn-warning btn-lg btn-block">Reserved Table</a>
+                        <a href="#reservetable" data-toggle="tooltip" data-html="true" title="Or Call us at <br> <strong>+85212345678</strong>" data-placement="bottom" class="btn btn-warning btn-block nav-link">
+                            Reserved Table
+                        </a>
                     </div>
                 </div>
 
@@ -201,6 +242,17 @@
         </div>
     </footer>
 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Tooltip script -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
