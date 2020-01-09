@@ -210,6 +210,15 @@
                             <a href="#mycarousel" role="button" data-slide="next" class="carousel-control-next">
                                 <span class="carousel-control-next-icon"></span>
                             </a>
+                            <!-- Carousel control btns -->
+                            <div class="btn-group" id="carouselButton">
+                                <button class="btn btn-danger btn-sm" id="carousel-pause">
+                                    <span class="fa fa-pause"></span>
+                                </button>
+                                <button class="btn btn-danger btn-sm" id="carousel-play">
+                                    <span class="fa fa-play"></span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,7 +328,17 @@
     <!-- Tooltip script -->
     <script>
         $(document).ready(function(){
+            // Tooltip code
             $('[data-toggle="tooltip"]').tooltip();
+
+            // Carousel control 
+            $("#mycarousel").carousel( {interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            })
         });
     </script>
 </body>
