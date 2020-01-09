@@ -1,3 +1,9 @@
+/*
+To compile the LESS, 
+rename style.css to style-old.css
+then run `lessc styles.less styles.css` in the command prompt
+*/
+
 .row-header{
     margin:0px auto;
     padding:0px;
