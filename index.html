@@ -36,7 +36,8 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <div class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+                    <!-- <a href="" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a> -->
+                    <a type="button" id="loginBtn"><span class="fa fa-sign-in"></span> Login</a>
                 </div>
             </div>            
         </div>
@@ -153,8 +154,11 @@
                         <img src="img/logo.png" alt="logo" class="img-fluid">
                     </div>
                     <div class="col-12 col-sm-6 align-self-center">
-                        <a data-target="#reserveform" data-toggle="modal"   class="btn btn-warning btn-block nav-link">
+                        <!-- <a data-target="#reserveform" data-toggle="modal"   class="btn btn-warning btn-block nav-link">
                             Reserve Table
+                        </a> -->
+                        <a id="reserveTableBtn"   class="btn btn-warning btn-block nav-link">
+                            Reserve a Table
                         </a>
                     </div>
                 </div>
@@ -339,6 +343,17 @@
             $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
             })
+
+            // Login Modal js
+            $("#loginBtn").click(function() {
+                $("#loginModal").modal();
+            });
+
+            $("#reserveTableBtn").click(function(){
+                $("#reserveform").modal();
+            })
+
+
         });
     </script>
 </body>
